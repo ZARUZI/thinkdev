@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Spotlight from "@/components/Spotlight";
+import FollowGif from "@/components/FollowGif";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-neutral-950 text-neutral-100">
+      <body className="relative bg-neutral-950 text-neutral-100">
         <Navbar />
         {children}
+        <FollowGif /> {/* absolute, jadi ikut scroll */}
       </body>
     </html>
   );

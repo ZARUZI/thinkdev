@@ -1,35 +1,34 @@
-import Image from "next/image";
-
 import Link from "next/link";
-import Spotlight from "@/components/Spotlight";
+import FollowGif from "@/components/FollowGif";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-950 text-neutral-100">
-      {/* Hero Section + Spotlight */}
+    <main className="bg-neutral-950 text-neutral-100 relative overflow-hidden">
+      {/* GIF mengikuti pointer */}
+      <FollowGif />
 
-      <Spotlight>
-        <section className="flex flex-col items-center justify-center min-h-screen text-center px-6 relative overflow-hidden">
-          <p className="inline-block rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-400">
-            🚀 Open for Projects
-          </p>
-          <h1 className="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight">
-            Ideas → Code → Impact
-          </h1>
-          <p className="mt-4 text-neutral-400 max-w-xl">
-            ThinkDev membantu startup, bisnis, dan personal brand
-            mengubah ide menjadi produk digital yang impactful.
-          </p>
-          <Link
-            href="/about"
-            className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-lg font-medium"
-          >
-            Mulai Proyekmu
-          </Link>
-        </section>
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center min-h-screen text-center px-6 relative z-10">
+        <p className="inline-block rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-400">
+          🚀 Open for Projects
+        </p>
+        <h1 className="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight">
+          Ideas → Code → Impact
+        </h1>
+        <p className="mt-4 text-neutral-400 max-w-xl">
+          ThinkDev membantu startup, bisnis, dan personal brand
+          mengubah ide menjadi produk digital yang impactful.
+        </p>
+        <Link
+          href="/about"
+          className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-lg font-medium"
+        >
+          Mulai Proyekmu
+        </Link>
+      </section>
 
       {/* Value Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-20 relative z-10">
         <h2 className="text-3xl font-bold mb-6 text-center">Kenapa ThinkDev?</h2>
         <p className="text-neutral-400 text-center max-w-2xl mx-auto">
           Karena kami percaya teknologi bukan sekadar kode,
@@ -39,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="bg-neutral-900 py-20">
+      <section className="bg-neutral-900 py-20 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12 text-center">Layanan Kami</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -82,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="text-center py-20 px-6">
+      <section className="text-center py-20 px-6 relative z-10">
         <h2 className="text-3xl font-bold mb-4">
           Siap bangun produk digital impianmu?
         </h2>
@@ -96,13 +95,11 @@ export default function Home() {
           Hubungi Kami
         </Link>
       </section>
-      </Spotlight>
 
       {/* Footer */}
-      <footer className="border-t border-neutral-800 py-6 text-center text-neutral-500 text-sm">
+      <footer className="border-t border-neutral-800 py-6 text-center text-neutral-500 text-sm relative z-10">
         © {new Date().getFullYear()} ThinkDev. All rights reserved.
       </footer>
     </main>
   );
 }
-
