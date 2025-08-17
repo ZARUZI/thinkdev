@@ -1,29 +1,33 @@
 import Image from "next/image";
 
 import Link from "next/link";
+import Spotlight from "@/components/Spotlight";
 
 export default function Home() {
   return (
     <main className="bg-neutral-950 text-neutral-100">
-      {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-screen text-center px-6">
-        <p className="inline-block rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-400">
-          🚀 Open for Projects
-        </p>
-        <h1 className="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight">
-          Ideas → Code → Impact
-        </h1>
-        <p className="mt-4 text-neutral-400 max-w-xl">
-          ThinkDev membantu startup, bisnis, dan personal brand
-          mengubah ide menjadi produk digital yang impactful.
-        </p>
-        <Link
-          href="/about"
-          className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-lg font-medium"
-        >
-          Mulai Proyekmu
-        </Link>
-      </section>
+      {/* Hero Section + Spotlight */}
+
+      <Spotlight>
+        <section className="flex flex-col items-center justify-center min-h-screen text-center px-6 relative overflow-hidden">
+          <p className="inline-block rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-400">
+            🚀 Open for Projects
+          </p>
+          <h1 className="mt-6 text-5xl md:text-6xl font-extrabold tracking-tight">
+            Ideas → Code → Impact
+          </h1>
+          <p className="mt-4 text-neutral-400 max-w-xl">
+            ThinkDev membantu startup, bisnis, dan personal brand
+            mengubah ide menjadi produk digital yang impactful.
+          </p>
+          <Link
+            href="/about"
+            className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-lg font-medium"
+          >
+            Mulai Proyekmu
+          </Link>
+        </section>
+      </Spotlight>
 
       {/* Value Section */}
       <section className="max-w-6xl mx-auto px-6 py-20">
