@@ -27,7 +27,6 @@ export default function Home() {
             Mulai Proyekmu
           </Link>
         </section>
-      </Spotlight>
 
       {/* Value Section */}
       <section className="max-w-6xl mx-auto px-6 py-20">
@@ -97,6 +96,7 @@ export default function Home() {
           Hubungi Kami
         </Link>
       </section>
+      </Spotlight>
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-6 text-center text-neutral-500 text-sm">
